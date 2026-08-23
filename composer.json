@@ -1,0 +1,10 @@
+{
+    "name": "findit/app",
+    "description": "FindIt lost and found platform",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "robthree/twofactorauth": "^2.0",
+        "phpmailer/phpmailer": "6.9"
+    }
+}

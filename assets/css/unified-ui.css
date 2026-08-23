@@ -1,0 +1,87 @@
+:root {
+    --fi-brand-500: #ff5b1f;
+    --fi-brand-600: #ef4d12;
+    --fi-brand-700: #d9460f;
+    --fi-accent-500: #22d3ee;
+    --fi-surface-900: #0a0f14;
+    --fi-surface-800: #131922;
+    --fi-line-700: #273040;
+    --fi-text-100: #ecf2ff;
+    --fi-muted-400: #95a4bc;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    accent-color: var(--fi-brand-500);
+}
+
+::selection {
+    background: rgba(255, 91, 31, 0.28);
+    color: #fff7ed;
+}
+
+:focus-visible {
+    outline: 2px solid rgba(255, 123, 44, 0.85);
+    outline-offset: 2px;
+}
+
+* {
+    scrollbar-color: #364152 #121922;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #121922;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #364152;
+    border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #4b5568;
+}
+
+.fi-card {
+    background: var(--fi-surface-800);
+    border: 1px solid var(--fi-line-700);
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.fi-btn-brand {
+    background: linear-gradient(135deg, var(--fi-brand-500), #ff7b2c);
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fi-btn-brand:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(255, 91, 31, 0.35);
+}
+
+.bg-blue-primary {
+    background-color: #ff5b1f !important;
+}
+
+.hover\:bg-blue-dark:hover {
+    background-color: #e64912 !important;
+}
+
+.focus\:border-blue-primary:focus {
+    border-color: #ff5b1f !important;
+}
+
+.focus\:ring-blue-primary:focus {
+    --tw-ring-color: rgba(255, 91, 31, 0.35) !important;
+}

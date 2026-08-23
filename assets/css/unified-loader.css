@@ -1,0 +1,103 @@
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(4, 8, 17, 0.84);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.loading-overlay-shell {
+    text-align: center;
+    color: #f8fafc;
+}
+
+.loading-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    object-fit: cover;
+    background: #ffffff;
+    border: 3px solid rgba(255, 255, 255, 0.98);
+    padding: 4px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+    animation: fiLoadingSpin 1s linear infinite;
+}
+
+.loading-logo-fallback {
+    width: 88px;
+    height: 88px;
+    border-radius: 999px;
+    border: 6px solid rgba(255, 255, 255, 0.28);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    margin: 0 auto;
+    animation: fiLoadingSpin 0.95s linear infinite;
+}
+
+#loadingText {
+    margin-top: 0.9rem;
+    color: #ffffff;
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+@keyframes fiLoadingSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.toast-notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    max-width: min(92vw, 360px);
+    border-radius: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(7px);
+    color: #f8fafc;
+    padding: 0.78rem 0.9rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast-success {
+    background: linear-gradient(135deg, rgba(255, 122, 26, 0.92), rgba(171, 78, 6, 0.92));
+}
+
+.toast-error {
+    background: linear-gradient(135deg, rgba(180, 34, 34, 0.92), rgba(103, 13, 13, 0.92));
+}
+
+.toast-body {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.toast-icon {
+    font-size: 0.98rem;
+    opacity: 0.95;
+}
+
+.toast-text {
+    color: #fff7ed;
+    font-weight: 600;
+    word-break: break-word;
+}

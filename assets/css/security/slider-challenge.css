@@ -1,0 +1,176 @@
+#claimSliderModal {
+    z-index: 80;
+}
+
+.claim-slider-panel {
+    width: min(96vw, 480px);
+    border-radius: 18px;
+    border: 1px solid #2a3444;
+    background: linear-gradient(160deg, #131922 0%, #0f151e 100%);
+    box-shadow: 0 24px 44px rgba(0, 0, 0, 0.45);
+    color: #e9f1ff;
+}
+
+.claim-slider-header h3 {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #f3f7ff;
+}
+
+.claim-slider-caption {
+    color: #9fb0c7;
+    font-size: 0.86rem;
+}
+
+.claim-slider-stage {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    min-height: 170px;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid #2e3a4d;
+    background: #101722;
+    overflow: hidden;
+}
+
+.claim-slider-canvas {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    user-select: none;
+}
+
+.claim-slider-piece-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    transform: translate(0, 0);
+    box-shadow: 0 12px 20px rgba(5, 10, 16, 0.45);
+    cursor: grab;
+    touch-action: none;
+    z-index: 2;
+}
+
+.claim-slider-piece-canvas:active {
+    cursor: grabbing;
+}
+
+.claim-slider-track {
+    position: relative;
+    margin-top: 1rem;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #2f3f57;
+    background: #0e1723;
+    overflow: hidden;
+}
+
+.claim-slider-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0;
+    background: linear-gradient(90deg, rgba(255, 123, 44, 0.42), rgba(255, 91, 31, 0.62));
+    transition: width 0.06s linear;
+}
+
+.claim-slider-label {
+    position: absolute;
+    inset: 0 54px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9fb0c7;
+    font-size: 0.82rem;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.claim-slider-handle {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 180, 136, 0.6);
+    background: linear-gradient(135deg, #ff7b2c, #ff5b1f);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 14px rgba(242, 76, 18, 0.35);
+    cursor: grab;
+    touch-action: none;
+    z-index: 3;
+}
+
+.claim-slider-handle:active {
+    cursor: grabbing;
+}
+
+.claim-slider-handle-icon {
+    font-size: 0.94rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.claim-slider-status {
+    margin-top: 0.75rem;
+    min-height: 1.2rem;
+    font-size: 0.82rem;
+    color: #9fb0c7;
+}
+
+.claim-slider-status.success {
+    color: #86efac;
+}
+
+.claim-slider-status.error {
+    color: #fca5a5;
+}
+
+.claim-slider-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.55rem;
+}
+
+.claim-slider-btn {
+    border-radius: 10px;
+    padding: 0.52rem 0.92rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.claim-slider-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.claim-slider-btn-soft {
+    border: 1px solid #334155;
+    background: #1f2937;
+    color: #d8e2f2;
+}
+
+.claim-slider-btn-soft:hover:not(:disabled) {
+    background: #293548;
+}
+
+.claim-slider-btn-main {
+    border: 1px solid rgba(255, 158, 97, 0.5);
+    background: linear-gradient(135deg, #ff7b2c, #f24c12);
+    color: #ffffff;
+}
+
+.claim-slider-btn-main:hover:not(:disabled) {
+    filter: brightness(1.06);
+}
